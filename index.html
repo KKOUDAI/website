@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自己紹介 | Kodai</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand__logo" aria-hidden="true">K</span>
+      <div>
+        <p class="brand__name">Kodai</p>
+        <p class="brand__role">Web Developer</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__eyebrow">こんにちは、コーダイです。</p>
+        <h1 id="hero-title">ユーザー体験を磨くフロントエンドエンジニア</h1>
+        <p class="hero__description">
+          React と TypeScript を中心に、プロトタイピングから本番運用まで伴走します。
+          チーム開発でのリード経験があり、プロダクトの価値を探りながら高速に検証するのが得意です。
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#projects">制作事例を見る</a>
+          <a class="button button--ghost" href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="hero__image" role="presentation"></div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__header">
+        <h2 id="about-title">About</h2>
+        <p>好奇心と探究心でアイデアを素早く形にする開発者です。</p>
+      </div>
+      <div class="about-grid">
+        <article>
+          <h3>ミッション</h3>
+          <p>
+            プロダクトを通じて「わかりやすさ」を届けること。複雑な要件をかみ砕きながら、
+            直感的に使える UI とスムーズな導線を設計するのがライフワークです。
+          </p>
+        </article>
+        <article>
+          <h3>強み</h3>
+          <ul>
+            <li>要件定義から開発・運用までを一気通貫で推進</li>
+            <li>デザインと実装の橋渡しで高速なフィードバックループを構築</li>
+            <li>チームコミュニケーションを円滑にするファシリテーション力</li>
+          </ul>
+        </article>
+        <article>
+          <h3>現在の関心</h3>
+          <p>
+            Web アクセシビリティとマイクロインタラクション。より多くのユーザーに心地よい体験を届けるため、
+            小さな驚きと配慮のあるプロダクト設計を探求しています。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="section__header">
+        <h2 id="skills-title">Skills</h2>
+        <p>プロダクトの価値を最大化するための技術とスタック。</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React / Next.js</li>
+            <li>TypeScript, JSX, Tailwind CSS</li>
+            <li>State management (Redux Toolkit, Zustand)</li>
+            <li>Storybook, Jest, Testing Library</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Backend & Infra</h3>
+          <ul>
+            <li>Node.js (Express / NestJS)</li>
+            <li>GraphQL, REST API 設計</li>
+            <li>Supabase, Firebase, PostgreSQL</li>
+            <li>Vercel, AWS, Docker</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Workflow</h3>
+          <ul>
+            <li>スクラム / カンバン運用</li>
+            <li>Figma を用いた UI プロトタイピング</li>
+            <li>Notion, Linear でのドキュメント化</li>
+            <li>データドリブンな KPI 設計</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section__header">
+        <h2 id="projects-title">Projects</h2>
+        <p>ユーザー課題から逆算し、価値ある仮説検証を高速に回した事例。</p>
+      </div>
+      <div class="projects-list">
+        <article class="project-card">
+          <div class="project-card__tag">SaaS ダッシュボード</div>
+          <h3>TeamFlow Analytics</h3>
+          <p>
+            プロダクトマネージャー向けの分析ダッシュボード。複雑なデータを視覚的に整理し、週次レポートの作成時間を 60% 削減。
+          </p>
+          <ul>
+            <li>Next.js + React Query でのデータフェッチ最適化</li>
+            <li>Storybook を用いた UI コンポーネント設計</li>
+            <li>導入 3 ヶ月で継続率 95% を達成</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-card__tag">B2C アプリ</div>
+          <h3>Habit Pulse</h3>
+          <p>
+            ライフログと習慣化を支援するモバイルアプリ。ゲーミフィケーションとリアルタイムフィードバックで継続率を改善。
+          </p>
+          <ul>
+            <li>React Native + Expo でクロスプラットフォーム開発</li>
+            <li>Firebase を用いた認証・Push 通知</li>
+            <li>初月で 10,000 ダウンロードを達成</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-card__tag">社内ツール</div>
+          <h3>Ops Studio</h3>
+          <p>
+            カスタマーサクセスチーム向けの業務効率化ツール。各種 Web サービスのデータを統合し、問い合わせ対応時間を 40% 短縮。
+          </p>
+          <ul>
+            <li>Electron + Next.js によるデスクトップアプリ</li>
+            <li>GraphQL Subscriptions でリアルタイム更新</li>
+            <li>権限管理と監査ログによるセキュリティ向上</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="timeline" aria-labelledby="timeline-title">
+      <div class="section__header">
+        <h2 id="timeline-title">Timeline</h2>
+        <p>学習とキャリアの歩み。</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2020</time>
+            <div>
+              <h3>大学で情報工学を専攻</h3>
+              <p>UI/UX デザインと HCI 研究室に所属し、ユーザーリサーチの重要性を学ぶ。</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2021</time>
+            <div>
+              <h3>スタートアップでインターン</h3>
+              <p>React + TypeScript で新規プロダクトのフロントエンドを担当。</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2022-現在</time>
+            <div>
+              <h3>フロントエンドエンジニアとして活動</h3>
+              <p>受託開発を中心に、要件定義からリリース、運用まで伴走。</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="section__header">
+        <h2 id="contact-title">Contact</h2>
+        <p>気になることがあれば、お気軽にご連絡ください。</p>
+      </div>
+      <form class="contact-form" aria-describedby="contact-note">
+        <div class="form-row">
+          <label for="name">お名前</label>
+          <input id="name" name="name" type="text" placeholder="山田 太郎" required />
+        </div>
+        <div class="form-row">
+          <label for="email">メールアドレス</label>
+          <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="message" rows="4" placeholder="お問い合わせ内容を入力してください" required></textarea>
+        </div>
+        <p id="contact-note" class="contact-note">送信ボタンでサンプルアラートが表示されます。</p>
+        <button class="button button--primary" type="submit">送信する</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kodai. Crafted with curiosity and care.</p>
+    <a class="to-top" href="#top">トップへ戻る</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
