@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自己紹介 | 古賀滉大</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand__logo" aria-hidden="true">K</span>
+      <div>
+        <p class="brand__name">古賀 滉大</p>
+        <p class="brand__role">iOS Developer</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__eyebrow">こんにちは、古賀滉大です。</p>
+        <h1 id="hero-title">日常に寄り添う iOS インディー開発者</h1>
+        <p class="hero__description">
+          SwiftUI と UIKit を軸に、アイデアの種から App Store 申請、継続改善まで伴走しています。
+          これまでに 8 本のアプリをリリースし、ユーザーの暮らしを少し楽にするプロダクトづくりに向き合っています。
+          最近は視覚と聴覚の刺激で集中をサポートする「IPPG Lab」を App Store に公開しました。
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="https://apps.apple.com/us/app/ippg-lab/id6751403294" target="_blank" rel="noopener noreferrer">App Storeで最新作を見る</a>
+          <a class="button button--ghost" href="#projects">アプリ事例を見る</a>
+        </div>
+      </div>
+      <div class="hero__image" role="presentation"></div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__header">
+        <h2 id="about-title">About</h2>
+        <p>身の回りの小さな不便をアプリで解消し、日常にフィットする体験を届けています。</p>
+      </div>
+      <div class="about-grid">
+        <article>
+          <h3>ミッション</h3>
+          <p>
+            「こんな機能があったら楽になるのに」を形にすること。家族や友人の声、
+            フィードバックコミュニティで得た気づきを元に、迷わず使えるミニマルな UI を設計しています。
+          </p>
+        </article>
+        <article>
+          <h3>強み</h3>
+          <ul>
+            <li>企画・設計・実装・申請までを 1 人で完遂する実行力</li>
+            <li>SwiftUI と UIKit を併用し、デザインの再現度と開発速度を両立</li>
+            <li>リリース後のデータ分析とユーザーインタビューで改善サイクルを構築</li>
+          </ul>
+        </article>
+        <article>
+          <h3>現在の関心</h3>
+          <p>
+            WidgetKit や App Intents を活用した没入しすぎない導線づくり。
+            生活リズムやヘルスケアデータと連動させた、ほどよいリマインダー体験を模索中です。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="section__header">
+        <h2 id="skills-title">Skills</h2>
+        <p>インディー開発でも継続的に改善できるよう磨いた武器たち。</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>iOS Development</h3>
+          <ul>
+            <li>Swift / SwiftUI を軸にした UI とロジックの実装</li>
+            <li>XCTest を用いたユニットテスト・UI テストの整備</li>
+            <li>TestFlight での配信とフィードバック収集フローの構築</li>
+            <li>企画・設計・開発・リリースまでを一貫して推進する実行力</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Store Ops &amp; Growth</h3>
+          <ul>
+            <li>App Store Connect 運用とリリースワークフローの最適化</li>
+            <li>サブスクリプション実装とストア審査対応 (StoreKit / RevenueCat)</li>
+            <li>TestFlight / Firebase Crashlytics を活用した品質管理</li>
+            <li>ASO・ストアアセットの改善で継続率と DL を向上</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Product Management</h3>
+          <ul>
+            <li>ユーザー課題の整理とジャーニーに基づく機能企画</li>
+            <li>情報設計・モック作成を通じた設計レビュー</li>
+            <li>ロードマップ策定と週次アップデートの運用</li>
+            <li>データ / 定性ヒアリングの両面で意思決定を支援</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section__header">
+        <h2 id="projects-title">Projects</h2>
+        <p>App Store に公開中の 8 本のアプリを、最新のアップデート順に紹介します。</p>
+      </div>
+      <div class="projects-list">
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1a/a4/63/1aa463f4-eb88-74f5-d3ac-aec6f43ee2fc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg"
+              alt="TABAKO 禁煙アプリのアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Health &amp; Fitness · 2025</div>
+              <h3>TABAKO 禁煙アプリ</h3>
+            </div>
+          </div>
+          <p>
+            禁煙の成果をお金・時間・健康の指標で見える化し、前向きな習慣化を支えるセルフケアアプリです。
+          </p>
+          <ul>
+            <li>禁煙と喫煙の履歴をカレンダーで可視化</li>
+            <li>吸わなかった本数から節約額と自由時間を自動計算</li>
+            <li>節約額に応じたリワード候補と通知で継続を後押し</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/tabako-%E7%A6%81%E7%85%99%E3%82%A2%E3%83%97%E3%83%AA/id6751954602" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/20/73/52207330-aa36-0a62-413b-55954977a6a3/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg"
+              alt="iPPG Lab のアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Health &amp; Fitness · 2025</div>
+              <h3>iPPG Lab</h3>
+            </div>
+          </div>
+          <p>
+            研究・教育用途の iPPG 計測アプリ。指先にカメラとフラッシュを当てるだけで脈波データをリアルタイムに取得できます。
+          </p>
+          <ul>
+            <li>心拍波形と BPM をライブ表示、手動・自動モードを切り替え</li>
+            <li>振幅 SD・サンプル差分 SD・BPM 安定性で信号品質を自動判定</li>
+            <li>計測データを CSV で書き出し、ガイドとチュートリアルを内蔵</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/ippg-lab/id6751403294" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/19/5f/e0/195fe0c6-1748-5a8e-a6b1-beaf5a9777ca/AppIcon-1x_U007emarketing-0-10-0-85-220.png/100x100bb.jpg"
+              alt="あさなびのアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Productivity · 2023</div>
+              <h3>あさなび</h3>
+            </div>
+          </div>
+          <p>
+            翌朝の出発時間から逆算して支度の段取りを整える、モーニングルーティン専用のタイマーアプリです。
+          </p>
+          <ul>
+            <li>外出時刻を入力するだけで準備の残り時間を可視化</li>
+            <li>朝にこなすタスク名と所要時間を組み合わせて登録</li>
+            <li>カウントダウンを見ながら支度のペースを調整</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/%E3%81%82%E3%81%95%E3%81%AA%E3%81%B3/id6473884924" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/38/3e/40/383e401d-ef31-4729-d0e7-ba5b5939917d/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+              alt="Plantodo のアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Productivity · 2023</div>
+              <h3>Plantodo</h3>
+            </div>
+          </div>
+          <p>
+            ストレス度と集中力のリズムをもとに、現在時刻から 3 時間分の予定を自動生成するスケジュールプランナーです。
+          </p>
+          <ul>
+            <li>自己評価したストレス度とタスクの連続上限を考慮して配分</li>
+            <li>長期休憩の要否を設定し、負荷の波をなだらかに調整</li>
+            <li>パーソナライズされた時間割で健康的な作業サイクルを支援</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/plantodo-%E6%97%A5%E5%B8%B8%E3%82%92%E6%9C%80%E9%81%A9%E5%8C%96%E3%81%99%E3%82%8B%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id6451367821" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/4f/e0/70/4fe070da-b2cc-5744-1267-3633f6d017b7/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+              alt="行動提案のアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Health &amp; Fitness · 2023</div>
+              <h3>行動提案</h3>
+            </div>
+          </div>
+          <p>
+            選んだジャンルに合わせた「今日のミッション」を提案し、小さな行動変容を積み重ねるライフログアプリです。
+          </p>
+          <ul>
+            <li>生活ジャンルを選ぶだけで行動ミッションを提示</li>
+            <li>実行後の振り返りで習慣の定着度を確認</li>
+            <li>日々のログから次の一歩を提案</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/%E8%A1%8C%E5%8B%95%E6%8F%90%E6%A1%88/id6448756489" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/63/4c/d1/634cd177-231f-7e8c-c896-3caf3f80a7ee/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+              alt="Attack On Ghost のアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Games · 2022</div>
+              <h3>Attack On Ghost</h3>
+            </div>
+          </div>
+          <p>
+            監視カメラでゴーストの侵入経路を見極め、適切なアイテムで撃退するリアルタイム防衛ゲームです。
+          </p>
+          <ul>
+            <li>Room C / D の監視映像から敵の動きを察知</li>
+            <li>ゴーストの種類に応じてアイテムを選択して対処</li>
+            <li>10 秒間の滞在を防ぎつつタイマーが 0 になると勝利</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/attack-on-ghost/id1635556481" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/e9/30/06/e9300602-1849-7b10-5e86-a9588f0ed7e8/AppIcon-1x_U007emarketing-0-7-0-85-220.png/100x100bb.jpg"
+              alt="学生ToDoのアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Education · 2022</div>
+              <h3>学生ToDo</h3>
+            </div>
+          </div>
+          <p>
+            勉強タスクに特化した ToDo 管理アプリ。シンプルな操作で学習計画を整理できます。
+          </p>
+          <ul>
+            <li>勉強カテゴリ別のタスク登録と柔軟なソート機能</li>
+            <li>今日や近々のタスクを一覧で確認</li>
+            <li>学習ペースに合わせたタスクリストを構築</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/%E5%AD%A6%E7%94%9Ftodo/id1626320311" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+        <article class="project-card">
+          <div class="project-card__header">
+            <img
+              class="project-card__icon"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/cc/6f/46/cc6f4641-0131-52b6-de17-e534f2991f25/AppIcon-1x_U007emarketing-0-7-0-sRGB-85-220.png/100x100bb.jpg"
+              alt="勉強スケジュール べんすけのアイコン"
+              loading="lazy"
+            />
+            <div>
+              <div class="project-card__tag">Education · 2020</div>
+              <h3>勉強スケジュール べんすけ</h3>
+            </div>
+          </div>
+          <p>
+            科目・期間・学習時間を入力するだけで最適な学習スケジュールを提案し、カレンダーと自動連携するプランニングアプリです。
+          </p>
+          <ul>
+            <li>曜日ごとの学習可能時間を設定すると計画を自動生成</li>
+            <li>朝・昼・夜など希望の時間帯や優先度に合わせて割り当て</li>
+            <li>提案した予定を iOS 標準カレンダーへ同期</li>
+          </ul>
+          <a class="button button--ghost" href="https://apps.apple.com/us/app/%E5%8B%89%E5%BC%B7%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB-%E3%81%B9%E3%82%93%E3%81%99%E3%81%91/id1497323555" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="timeline" aria-labelledby="timeline-title">
+      <div class="section__header">
+        <h2 id="timeline-title">Timeline</h2>
+        <p>アプリづくりを続けてきた足跡。</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2019</time>
+            <div>
+              <h3>Swift との出会い</h3>
+              <p>大学の課題をきっかけに Swift を独学。コミュニティでの登壇を通じて設計と UI の楽しさを知る。</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2020</time>
+            <div>
+              <h3>初の App Store 申請</h3>
+              <p>日課管理アプリを開発し、リジェクト対応と改善サイクルを経験。ユーザーインタビューの重要性を実感。</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2024</time>
+            <div>
+              <h3>IPPG Lab をリリース</h3>
+              <p>視覚とサウンドを組み合わせたフォーカスアプリを App Store に公開。集中方法を検証できるラボとして継続改善中です。</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline__point">
+            <time class="timeline__time">2022-現在</time>
+            <div>
+              <h3>インディー開発者として活動</h3>
+              <p>生活効率化やヘルスケアなど 8 本のアプリをリリース。分析とアップデートを継続しながら、次のアイデアを育てています。</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="section__header">
+        <h2 id="contact-title">Contact</h2>
+        <p>気になることがあれば、お気軽にご連絡ください。</p>
+      </div>
+      <form class="contact-form" aria-describedby="contact-note">
+        <div class="form-row">
+          <label for="name">お名前</label>
+          <input id="name" name="name" type="text" placeholder="山田 太郎" required />
+        </div>
+        <div class="form-row">
+          <label for="email">メールアドレス</label>
+          <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="message" rows="4" placeholder="お問い合わせ内容を入力してください" required></textarea>
+        </div>
+        <p id="contact-note" class="contact-note">送信ボタンを押すとメールアプリが起動し、kkoga2013@gmail.com 宛に内容が送信されます。</p>
+        <button class="button button--primary" type="submit">送信する</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 古賀滉大. Crafted with curiosity and care.</p>
+    <a class="to-top" href="#top">トップへ戻る</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
