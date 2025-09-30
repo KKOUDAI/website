@@ -54,6 +54,7 @@ if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(contactForm);
+<<<<<<< HEAD
     const name = (formData.get("name") || "").toString().trim();
     const email = (formData.get("email") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
@@ -72,6 +73,11 @@ if (contactForm) {
     const mailtoLink = `mailto:kkoga2013@gmail.com?subject=${subject}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
 
     window.location.href = mailtoLink;
+=======
+    const name = formData.get("name") || "";
+
+    window.alert(`${name}さん、メッセージありがとうございます！`);
+>>>>>>> 9014ec55f94161203a3be2eff2a3a035f5979622
     contactForm.reset();
   });
 }

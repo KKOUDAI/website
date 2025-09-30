@@ -314,6 +314,7 @@ a:hover {
   box-shadow: var(--shadow-soft);
 }
 
+<<<<<<< HEAD
 .project-card__header {
   display: flex;
   align-items: flex-start;
@@ -330,6 +331,8 @@ a:hover {
   flex-shrink: 0;
 }
 
+=======
+>>>>>>> 9014ec55f94161203a3be2eff2a3a035f5979622
 .project-card__tag {
   display: inline-block;
   font-size: 0.8rem;
