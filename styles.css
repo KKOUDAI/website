@@ -314,7 +314,6 @@ a:hover {
   box-shadow: var(--shadow-soft);
 }
 
-<<<<<<< HEAD
 .project-card__header {
   display: flex;
   align-items: flex-start;
@@ -331,18 +330,31 @@ a:hover {
   flex-shrink: 0;
 }
 
-=======
->>>>>>> 9014ec55f94161203a3be2eff2a3a035f5979622
 .project-card__tag {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
-  background: rgba(99, 102, 241, 0.12);
-  padding: 0.35rem 0.75rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(168, 85, 247, 0.18));
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  padding: 0.4rem 0.85rem 0.4rem 1rem;
   border-radius: 999px;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 1rem;
+  box-shadow: 0 18px 30px -24px rgba(79, 70, 229, 0.7);
+}
+
+.project-card__tag::before {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12), 0 0 8px rgba(99, 102, 241, 0.5);
 }
 
 .project-card h3 {
