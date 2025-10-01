@@ -180,6 +180,9 @@ a:hover {
   box-shadow: var(--shadow-card);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__image::before,
@@ -204,6 +207,146 @@ a:hover {
   background: rgba(255, 255, 255, 0.2);
   bottom: -80px;
   left: -40px;
+}
+
+.hero-showcase {
+  position: relative;
+  width: min(360px, 80%);
+  aspect-ratio: 1;
+}
+
+.hero-showcase__floaters {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-showcase__icon {
+  position: absolute;
+  width: clamp(52px, 15vw, 80px);
+  height: clamp(52px, 15vw, 80px);
+  border-radius: 22%;
+  object-fit: cover;
+  box-shadow: 0 20px 32px rgba(15, 23, 42, 0.18);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  --float-start-x: -8px;
+  --float-start-y: 10px;
+  --float-end-x: 10px;
+  --float-end-y: -14px;
+  animation: heroFloat var(--float-duration, 8.5s) ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+  transform: translate3d(var(--float-start-x), var(--float-start-y), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .hero-showcase__icon {
+  box-shadow: 0 18px 32px rgba(8, 13, 24, 0.45);
+  border-color: rgba(15, 23, 42, 0.55);
+}
+
+.hero-showcase__icon--1 {
+  top: 12%;
+  left: 18%;
+  --float-delay: -2.2s;
+  --float-duration: 9.2s;
+  --float-start-x: -14px;
+  --float-start-y: 14px;
+  --float-end-x: 12px;
+  --float-end-y: -16px;
+}
+
+.hero-showcase__icon--2 {
+  bottom: 18%;
+  left: 26%;
+  --float-delay: -4.1s;
+  --float-duration: 7.8s;
+  --float-start-x: 16px;
+  --float-start-y: -12px;
+  --float-end-x: -18px;
+  --float-end-y: 20px;
+}
+
+.hero-showcase__icon--3 {
+  top: 10%;
+  right: 16%;
+  --float-delay: -1.4s;
+  --float-duration: 8.6s;
+  --float-start-x: -12px;
+  --float-start-y: -10px;
+  --float-end-x: 16px;
+  --float-end-y: 14px;
+}
+
+.hero-showcase__icon--4 {
+  bottom: 16%;
+  right: 22%;
+  --float-delay: -3.3s;
+  --float-duration: 10s;
+  --float-start-x: 18px;
+  --float-start-y: 10px;
+  --float-end-x: -16px;
+  --float-end-y: -18px;
+}
+
+.hero-showcase__icon--5 {
+  top: 44%;
+  left: 52%;
+  --float-delay: -5.5s;
+  --float-duration: 9.8s;
+  --float-start-x: -10px;
+  --float-start-y: 8px;
+  --float-end-x: 12px;
+  --float-end-y: -18px;
+}
+
+.hero-showcase__icon--6 {
+  top: 34%;
+  left: 14%;
+  --float-delay: -6.7s;
+  --float-duration: 8.8s;
+  --float-start-x: -12px;
+  --float-start-y: 6px;
+  --float-end-x: 16px;
+  --float-end-y: -12px;
+}
+
+.hero-showcase__icon--7 {
+  bottom: 32%;
+  right: 12%;
+  --float-delay: -1.9s;
+  --float-duration: 9.6s;
+  --float-start-x: 10px;
+  --float-start-y: -8px;
+  --float-end-x: -14px;
+  --float-end-y: 16px;
+}
+
+.hero-showcase__icon--8 {
+  top: 24%;
+  left: 46%;
+  --float-delay: -3.8s;
+  --float-duration: 7.9s;
+  --float-start-x: 8px;
+  --float-start-y: -10px;
+  --float-end-x: -12px;
+  --float-end-y: 14px;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translate3d(var(--float-start-x), var(--float-start-y), 0);
+  }
+  50% {
+    transform: translate3d(var(--float-end-x), var(--float-end-y), 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-showcase__icon {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .button {
