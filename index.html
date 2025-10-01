@@ -11,35 +11,37 @@
 </head>
 <body>
   <header class="site-header" id="top">
-    <div class="brand">
-      <span class="brand__logo" aria-hidden="true">K</span>
-      <div>
-        <p class="brand__name">古賀 滉大</p>
-        <p class="brand__role">iOS Developer</p>
+    <div class="site-header__inner">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true">K</span>
+        <div>
+          <p class="brand__name">古賀 滉大</p>
+          <p class="brand__role">iOS Developer</p>
+        </div>
       </div>
-          </div>
-    <nav class="site-nav" id="primaryNav" aria-label="主要ナビゲーション">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="primaryNav">
-        <span class="nav-toggle__line" aria-hidden="true"></span>
-      </button>
+      <nav class="site-nav" id="primaryNav" aria-label="主要ナビゲーション">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="primaryNav">
+          <span class="nav-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
-        <p class="hero__eyebrow">こんにちは、古賀滉大です。</p>
-        <h1 id="hero-title">日常に寄り添う iOS インディー開発者</h1>
+        <p class="hero__eyebrow">古賀滉大です。</p>
+        <h1 id="hero-title">日常に便利さと楽しさを届ける iOS開発者</h1>
         <p class="hero__description">
           私は、SwiftUI と UIKit を用いて、企画・設計から開発、公開後の運用まで一貫して取り組んできました。
           これまでに 8 本のアプリをリリースし、日常を少し便利にしたり、楽しさを加えるプロダクトづくりに挑戦してきました。
@@ -49,7 +51,7 @@
           <a class="button button--primary" href="https://apps.apple.com/us/app/ippg-lab/id6751403294" target="_blank" rel="noopener noreferrer">App Storeで最新作を見る</a>
           <a class="button button--ghost" href="#projects">アプリ事例を見る</a>
         </div>
-          </div>
+      </div>
       <div class="hero__image" role="presentation">
         <div class="hero-showcase" aria-hidden="true">
           <div class="hero-showcase__floaters">
@@ -117,14 +119,13 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="section__header">
         <h2 id="about-title">About</h2>
-        <p>身の回りの小さな不便をアプリで解消し、日常にフィットする体験を届けています。</p>
+        <p>アプリの力で、日常をもっと便利に、もっと楽しく。</p>
       </div>
       <div class="about-grid">
         <article>
           <h3>ミッション</h3>
           <p>
-            「こんな機能があったら楽になるのに」を形にすること。家族や友人の声、
-            フィードバックコミュニティで得た気づきを元に、迷わず使えるミニマルな UI を設計しています。
+            複雑さを取り除き、直感だけを残す。声なき声に耳を傾け、心地よい体験を設計する。
           </p>
         </article>
         <article>
@@ -185,6 +186,11 @@
       <div class="section__header">
         <h2 id="projects-title">Projects</h2>
         <p>App Store に公開中の 8 本のアプリを、最新のアップデート順に紹介します。</p>
+      </div>
+      <div class="projects-highlight" aria-label="累計ダウンロード数">
+        <span class="projects-highlight__badge">Milestone</span>
+        <p class="projects-highlight__lead">合計ダウンロード数 <strong>2,500+</strong></p>
+        <p class="projects-highlight__meta">2025年10月 現在 / App Store 公開アプリ累計</p>
       </div>
       <div class="projects-list">
         <article class="project-card">

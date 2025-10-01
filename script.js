@@ -76,7 +76,10 @@ if (navToggle && siteHeader && siteNav) {
 
   document.addEventListener("click", (event) => {
     if (!siteHeader.classList.contains("site-header--nav-open")) return;
-    if (siteHeader.contains(event.target)) return;
+    const isToggle = navToggle.contains(event.target);
+    const isThemeToggle = themeToggle && themeToggle.contains(event.target);
+    const isInsideNav = siteNav.contains(event.target);
+    if (isToggle || isThemeToggle || isInsideNav) return;
     closeNav();
   });
 }
