@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学生ToDo | 古賀滉大 Apps</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand__logo" aria-hidden="true">K</span>
+      <div>
+        <p class="brand__name">古賀 滉大</p>
+        <p class="brand__role">iOS Developer</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+  </header>
+
+  <main>
+    <article class="app-detail">
+      <header class="app-detail__hero">
+        <img class="app-detail__icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/e9/30/06/e9300602-1849-7b10-5e86-a9588f0ed7e8/AppIcon-1x_U007emarketing-0-7-0-85-220.png/200x200bb.jpg" alt="学生ToDoのアイコン" loading="lazy" />
+        <div>
+          <p class="app-detail__category">Education · Release 2022/05/28</p>
+          <h1>学生ToDo</h1>
+          <p class="app-detail__lead">学生の学習タスク管理に特化</p>
+          <p class="app-detail__summary">授業・課題・テストなど学習タスクをカテゴリ別に整理し、優先度順で確認できます。</p>
+          <dl class="app-detail__stats">
+        <div><dt>価格</dt><dd>Free</dd></div>
+        <div><dt>対応OS</dt><dd>iOS 14 以上</dd></div>
+        <div><dt>カテゴリ</dt><dd>Education</dd></div>
+        <div><dt>バージョン</dt><dd>1.0.6</dd></div>
+        <div><dt>対応言語</dt><dd>日本語</dd></div>
+        <div><dt>リリース</dt><dd>2022/05/28</dd></div>
+          </dl>
+          <div class="app-detail__actions">
+            <a class="button button--primary" href="https://apps.apple.com/us/app/%E5%AD%A6%E7%94%9Ftodo/id1626320311" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+            <a class="button button--ghost" href="../index.html#projects">一覧へ戻る</a>
+          </div>
+        </div>
+      </header>
+    <section class="app-detail__section">
+      <h2>機能</h2>
+      <ul class="app-detail__list">
+          <li>カテゴリ別のタスク登録と並べ替え</li>
+          <li>今日・今週のタスクをまとめて確認</li>
+          <li>完了チェックで達成度を可視化</li>
+      </ul>
+    </section>
+    <section class="app-detail__section">
+      <h2>開発メモ</h2>
+      <p>学生インターン中に得たフィードバックをもとに、“入力が面倒” をなくすインターフェースへ改良しました。</p>
+    </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 古賀滉大. Crafted with curiosity and care.</p>
+    <a class="to-top" href="#top">トップへ戻る</a>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

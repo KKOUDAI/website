@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPPG Lab | 古賀滉大 Apps</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand__logo" aria-hidden="true">K</span>
+      <div>
+        <p class="brand__name">古賀 滉大</p>
+        <p class="brand__role">iOS Developer</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+  </header>
+
+  <main>
+    <article class="app-detail">
+      <header class="app-detail__hero">
+        <img class="app-detail__icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/20/73/52207330-aa36-0a62-413b-55954977a6a3/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="iPPG Labのアイコン" loading="lazy" />
+        <div>
+          <p class="app-detail__category">Health & Fitness · Release 2025/08/28</p>
+          <h1>iPPG Lab</h1>
+          <p class="app-detail__lead">研究と授業で使える iPPG 計測ラボ</p>
+          <p class="app-detail__summary">スマホのカメラとフラッシュだけで脈波を取得し、リアルタイム解析から CSV 出力までを 1 つのアプリに統合しました。</p>
+          <dl class="app-detail__stats">
+        <div><dt>価格</dt><dd>Free</dd></div>
+        <div><dt>対応OS</dt><dd>iOS 16.6 以上</dd></div>
+        <div><dt>カテゴリ</dt><dd>Health & Fitness</dd></div>
+        <div><dt>バージョン</dt><dd>1.2</dd></div>
+        <div><dt>対応言語</dt><dd>英語</dd></div>
+        <div><dt>リリース</dt><dd>2025/08/28</dd></div>
+          </dl>
+          <div class="app-detail__actions">
+            <a class="button button--primary" href="https://apps.apple.com/us/app/ippg-lab/id6751403294" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+            <a class="button button--ghost" href="../index.html#projects">一覧へ戻る</a>
+          </div>
+        </div>
+      </header>
+    <section class="app-detail__section">
+      <h2>主な機能</h2>
+      <ul class="app-detail__list">
+          <li>手動・自動モードを切り替えられる計測フロー</li>
+          <li>振幅 SD / サンプル差分 SD / BPM 安定性による信号品質評価</li>
+          <li>リアルタイム波形と BPM 表示</li>
+          <li>計測データの CSV 書き出しと共有</li>
+          <li>チュートリアルと計測ガイドをアプリ内に完備</li>
+      </ul>
+    </section>
+    <section class="app-detail__section">
+      <h2>ユースケース</h2>
+      <p>大学の研究室やワークショップでのデモンストレーションを想定し、操作をガイド付きチュートリアルで簡略化しました。</p>
+      <p>医療機器ではないことを明示しつつ、教育用途で扱いやすいようデータエクスポートと品質指標を充実させています。</p>
+    </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 古賀滉大. Crafted with curiosity and care.</p>
+    <a class="to-top" href="#top">トップへ戻る</a>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

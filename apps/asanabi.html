@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>あさなび | 古賀滉大 Apps</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand__logo" aria-hidden="true">K</span>
+      <div>
+        <p class="brand__name">古賀 滉大</p>
+        <p class="brand__role">iOS Developer</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+  </header>
+
+  <main>
+    <article class="app-detail">
+      <header class="app-detail__hero">
+        <img class="app-detail__icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/19/5f/e0/195fe0c6-1748-5a8e-a6b1-beaf5a9777ca/AppIcon-1x_U007emarketing-0-10-0-85-220.png/200x200bb.jpg" alt="あさなびのアイコン" loading="lazy" />
+        <div>
+          <p class="app-detail__category">Productivity · Release 2023/12/07</p>
+          <h1>あさなび</h1>
+          <p class="app-detail__lead">朝の支度をタイマーでナビゲート</p>
+          <p class="app-detail__summary">外出時刻とタスクを登録するだけで、残り時間を可視化しながら焦らず準備できます。</p>
+          <dl class="app-detail__stats">
+        <div><dt>価格</dt><dd>Free</dd></div>
+        <div><dt>対応OS</dt><dd>iOS 15 以上</dd></div>
+        <div><dt>カテゴリ</dt><dd>Productivity</dd></div>
+        <div><dt>バージョン</dt><dd>1.0.3</dd></div>
+        <div><dt>対応言語</dt><dd>日本語</dd></div>
+        <div><dt>リリース</dt><dd>2023/12/07</dd></div>
+          </dl>
+          <div class="app-detail__actions">
+            <a class="button button--primary" href="https://apps.apple.com/us/app/%E3%81%82%E3%81%95%E3%81%AA%E3%81%B3/id6473884924" target="_blank" rel="noopener noreferrer">App Storeで見る</a>
+            <a class="button button--ghost" href="../index.html#projects">一覧へ戻る</a>
+          </div>
+        </div>
+      </header>
+    <section class="app-detail__section">
+      <h2>できること</h2>
+      <ul class="app-detail__list">
+          <li>外出時刻から逆算したカウントダウンタイマー</li>
+          <li>タスク名と所要時間の組み合わせで朝のルーティンを整理</li>
+          <li>残り時間の通知で準備のペースを調整</li>
+      </ul>
+    </section>
+    <section class="app-detail__section">
+      <h2>開発メモ</h2>
+      <p>家族全員が直感的に使える UI を目指し、表示する情報を “現在やること” と “残り時間” に絞りました。</p>
+    </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 古賀滉大. Crafted with curiosity and care.</p>
+    <a class="to-top" href="#top">トップへ戻る</a>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
