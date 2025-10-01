@@ -1,5 +1,8 @@
 const root = document.documentElement;
 const themeToggle = document.getElementById("themeToggle");
+const navToggle = document.getElementById("navToggle");
+const siteHeader = document.querySelector(".site-header");
+const siteNav = document.getElementById("primaryNav");
 const contactForm = document.querySelector(".contact-form");
 const yearElem = document.getElementById("year");
 
@@ -30,6 +33,51 @@ if (themeToggle) {
     const nextTheme = isDark ? "light" : "dark";
     applyTheme(nextTheme);
     localStorage.setItem("codex-theme", nextTheme);
+  });
+}
+
+if (navToggle && siteHeader && siteNav) {
+  const closeNav = () => {
+    if (!siteHeader.classList.contains("site-header--nav-open")) return;
+    siteHeader.classList.remove("site-header--nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "メニューを開く");
+  };
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("site-header--nav-open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    navToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+    if (isOpen) {
+      const firstLink = siteNav.querySelector("a");
+      if (firstLink) {
+        firstLink.focus({ preventScroll: true });
+      }
+    }
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      closeNav();
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeNav();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 640) {
+      closeNav();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!siteHeader.classList.contains("site-header--nav-open")) return;
+    if (siteHeader.contains(event.target)) return;
+    closeNav();
   });
 }
 
