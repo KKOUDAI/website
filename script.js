@@ -4,6 +4,7 @@ const navToggle = document.getElementById("navToggle");
 const siteHeader = document.querySelector(".site-header");
 const siteNav = document.getElementById("primaryNav");
 const contactForm = document.querySelector(".contact-form");
+const navBackdrop = document.getElementById("navBackdrop");
 const yearElem = document.getElementById("year");
 
 // Set current year in footer for quick maintenance
@@ -37,23 +38,30 @@ if (themeToggle) {
 }
 
 if (navToggle && siteHeader && siteNav) {
+  const firstNavLink = siteNav.querySelector("a");
+
+  const setNavState = (isOpen) => {
+    siteHeader.classList.toggle("site-header--nav-open", isOpen);
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    navToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+    document.body.classList.toggle("nav-open", isOpen);
+    if (navBackdrop) {
+      navBackdrop.hidden = !isOpen;
+    }
+
+    if (isOpen && firstNavLink) {
+      firstNavLink.focus({ preventScroll: true });
+    }
+  };
+
   const closeNav = () => {
     if (!siteHeader.classList.contains("site-header--nav-open")) return;
-    siteHeader.classList.remove("site-header--nav-open");
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "メニューを開く");
+    setNavState(false);
   };
 
   navToggle.addEventListener("click", () => {
-    const isOpen = siteHeader.classList.toggle("site-header--nav-open");
-    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    navToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
-    if (isOpen) {
-      const firstLink = siteNav.querySelector("a");
-      if (firstLink) {
-        firstLink.focus({ preventScroll: true });
-      }
-    }
+    const isOpen = siteHeader.classList.contains("site-header--nav-open");
+    setNavState(!isOpen);
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
@@ -61,6 +69,10 @@ if (navToggle && siteHeader && siteNav) {
       closeNav();
     });
   });
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeNav);
+  }
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
@@ -76,10 +88,12 @@ if (navToggle && siteHeader && siteNav) {
 
   document.addEventListener("click", (event) => {
     if (!siteHeader.classList.contains("site-header--nav-open")) return;
-    const isToggle = navToggle.contains(event.target);
-    const isThemeToggle = themeToggle && themeToggle.contains(event.target);
-    const isInsideNav = siteNav.contains(event.target);
-    if (isToggle || isThemeToggle || isInsideNav) return;
+    const target = event.target;
+    const isToggle = navToggle.contains(target);
+    const isThemeToggle = themeToggle && themeToggle.contains(target);
+    const isInsideNav = siteNav.contains(target);
+    const isBackdrop = navBackdrop && navBackdrop.contains(target);
+    if (isToggle || isThemeToggle || isInsideNav || isBackdrop) return;
     closeNav();
   });
 }

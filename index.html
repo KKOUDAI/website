@@ -22,8 +22,8 @@
       <nav class="site-nav" id="primaryNav" aria-label="主要ナビゲーション">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#research">Research</a></li>
           <li><a href="#timeline">Timeline</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -35,6 +35,7 @@
         </button>
       </div>
     </div>
+    <div class="site-nav__backdrop" id="navBackdrop" hidden aria-hidden="true"></div>
   </header>
 
   <main>
@@ -142,42 +143,6 @@
             WidgetKit や App Intents を活用した没入しすぎない導線づくり。
             生活リズムやヘルスケアデータと連動させた、ほどよいリマインダー体験を模索中です。
           </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
-      <div class="section__header">
-        <h2 id="skills-title">Skills</h2>
-        <p>インディー開発でも継続的に改善できるよう磨いた武器たち。</p>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>iOS Development</h3>
-          <ul>
-            <li>Swift / SwiftUI を軸にした UI とロジックの実装</li>
-            <li>XCTest を用いたユニットテスト・UI テストの整備</li>
-            <li>TestFlight での配信とフィードバック収集フローの構築</li>
-            <li>企画・設計・開発・リリースまでを一貫して推進する実行力</li>
-          </ul>
-        </article>
-        <article class="skill-card">
-          <h3>Store Ops &amp; Growth</h3>
-          <ul>
-            <li>App Store Connect 運用とリリースワークフローの最適化</li>
-            <li>サブスクリプション実装とストア審査対応 (StoreKit / RevenueCat)</li>
-            <li>TestFlight / Firebase Crashlytics を活用した品質管理</li>
-            <li>ASO・ストアアセットの改善で継続率と DL を向上</li>
-          </ul>
-        </article>
-        <article class="skill-card">
-          <h3>Product Management</h3>
-          <ul>
-            <li>ユーザー課題の整理とジャーニーに基づく機能企画</li>
-            <li>情報設計・モック作成を通じた設計レビュー</li>
-            <li>ロードマップ策定と週次アップデートの運用</li>
-            <li>データ / 定性ヒアリングの両面で意思決定を支援</li>
-          </ul>
         </article>
       </div>
     </section>
@@ -459,51 +424,165 @@
       </div>
       <ol class="timeline">
         <li>
-          <div class="timeline__point">
-            <time class="timeline__time">2019</time>
-            <div>
+          <div class="timeline__point timeline__point--learn">
+            <div class="timeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tlLearnGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#93c5fd" />
+                    <stop offset="100%" stop-color="#6366f1" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="22" fill="url(#tlLearnGradient)" />
+                <path d="M16 22l8-4 8 4-8 4-8-4z" fill="#fff" opacity="0.95" />
+                <path d="M18 24v5l6 3 6-3v-5" fill="#e0e7ff" />
+                <path d="M17 31h14" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" opacity="0.35" />
+              </svg>
+            </div>
+            <div class="timeline__body">
+              <time class="timeline__time">2019</time>
               <h3>週末にこつこつ Swift を習得</h3>
-              <p>大学の課題で作った出席管理ツールを機に Swift を独学。コミュニティで設計レビューを受けながら、使いやすさにこだわる姿勢が芽生えました。</p>
+              <p>塾のアプリ制作のイベントを機に Swift を独学。友達やユーザからのレビューを受け、使いやすさにこだわる姿勢が芽生えました。</p>
             </div>
           </div>
         </li>
         <li>
-          <div class="timeline__point">
-            <time class="timeline__time">2020</time>
-            <div>
+          <div class="timeline__point timeline__point--launch">
+            <div class="timeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tlLaunchGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#c084fc" />
+                    <stop offset="100%" stop-color="#6366f1" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="22" fill="url(#tlLaunchGradient)" />
+                <path d="M24 10l7 8h-4v10h-6V18h-4l7-8z" fill="#fff" />
+                <path d="M18 28h12v6c0 1.7-1.3 3-3 3h-6c-1.7 0-3-1.3-3-3v-6z" fill="rgba(255,255,255,0.75)" />
+              </svg>
+            </div>
+            <div class="timeline__body">
+              <time class="timeline__time">2020</time>
               <h3>「勉強スケジュール べんすけ」で初リリース</h3>
               <p>受験期の課題だった学習計画づくりをアプリで解決。リジェクト対応を繰り返し、UI/UX と審査観点の両方で学びを得ました。</p>
             </div>
           </div>
         </li>
         <li>
-          <div class="timeline__point">
-            <time class="timeline__time">2022</time>
-            <div>
+          <div class="timeline__point timeline__point--expand">
+            <div class="timeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tlExpandGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#f472b6" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="22" fill="url(#tlExpandGradient)" />
+                <path d="M17 18h14l4 10H13l4-10z" fill="rgba(15,23,42,0.12)" />
+                <circle cx="18" cy="19" r="3.4" fill="#fff" />
+                <circle cx="30" cy="19" r="3.4" fill="#fff" />
+                <path d="M16 28h16l-3 6H19l-3-6z" fill="#4c1d95" opacity="0.5" />
+              </svg>
+            </div>
+            <div class="timeline__body">
+              <time class="timeline__time">2022</time>
               <h3>ライフログとゲームの両軸で挑戦</h3>
               <p>「学生ToDo」「Attack On Ghost」などジャンルの異なる 2 本を公開。日常の課題とエンタメの表現の幅を広げ、UI パターンの知見を蓄積しました。</p>
             </div>
           </div>
         </li>
         <li>
-          <div class="timeline__point">
-            <time class="timeline__time">2023</time>
-            <div>
+          <div class="timeline__point timeline__point--habit">
+            <div class="timeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tlHabitGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#34d399" />
+                    <stop offset="100%" stop-color="#22d3ee" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="22" fill="url(#tlHabitGradient)" />
+                <path d="M15 30c0-5 4-9 9-9s9 4 9 9" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none" />
+                <path d="M24 14v5" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+                <circle cx="24" cy="32" r="3.4" fill="#fff" />
+              </svg>
+            </div>
+            <div class="timeline__body">
+              <time class="timeline__time">2023</time>
               <h3>生活リズムに寄り添うプロダクトへ</h3>
               <p>「Plantodo」「あさなび」「行動提案」で生活習慣データと連動した体験を設計。ユーザーインタビューを継続し、リテンション改善の指標づくりを進めました。</p>
             </div>
           </div>
         </li>
         <li>
-          <div class="timeline__point">
-            <time class="timeline__time">2025-現在</time>
-            <div>
+          <div class="timeline__point timeline__point--future">
+            <div class="timeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tlFutureGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#facc15" />
+                    <stop offset="100%" stop-color="#fb7185" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="22" fill="url(#tlFutureGradient)" />
+                <path d="M24 14l6 6-6 6-6-6 6-6z" fill="#fff" />
+                <path d="M18 28h12l3 6H15l3-6z" fill="#fee2b7" />
+                <path d="M23 18h2v8h-2z" fill="#7f1d1d" opacity="0.45" />
+              </svg>
+            </div>
+            <div class="timeline__body">
+              <time class="timeline__time">2025-現在</time>
               <h3>ヘルスケア × 研究領域をアプリで加速</h3>
               <p>研究室向けの「iPPG Lab」とセルフケア支援の「TABAKO 禁煙アプリ」を公開。データ基盤と継続的なアップデート体制を整え、次のプロダクトの構想を練っています。</p>
             </div>
           </div>
         </li>
       </ol>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="section__header">
+        <h2 id="research-title">Research</h2>
+        <p>iPPG（イメージング光電式容積脈波）のデータ品質を左右する要因に迫った研究です。</p>
+      </div>
+      <div class="research-overview">
+        <div class="research-overview__summary">
+          <p class="research-overview__eyebrow">研究ハイライト</p>
+          <h3 class="research-overview__title">FPS が iPPG 測定の信頼性を決める</h3>
+          <p class="research-overview__description">スマートフォンなどのカメラで脈波を測定する iPPG では、<strong>撮影時間よりも動画の滑らかさ（フレームレート / FPS）がデータ品質を大きく左右する</strong>ことを明らかにしました。</p>
+          <ul class="research-overview__points">
+            <li>DET・L・E の全指標で FPS の影響が最大</li>
+            <li>測定時間を短くしても品質はほぼ維持</li>
+            <li>FPS を下げると指標値が急激に変化</li>
+          </ul>
+        </div>
+        <div class="research-panels">
+          <article class="research-panel">
+            <h4>背景</h4>
+            <ul>
+              <li>iPPG はスマートフォンのカメラに指先を当てるだけで脈波を推定できる技術。</li>
+              <li>測定時間やフレームレートがデータ特性にどう影響するかは十分に解明されていなかった。</li>
+            </ul>
+          </article>
+          <article class="research-panel">
+            <h4>実験と分析</h4>
+            <ul>
+              <li>20 代の健康な男女 20 名の指先を iPad mini（240 FPS）で約 5 分間撮影。</li>
+              <li>各フレームの指先領域から赤色成分の平均値を抽出し、脈波データを作成。</li>
+              <li>リカレンス定量化分析（DET / L / E）で複雑性と予測性を評価。</li>
+            </ul>
+          </article>
+          <article class="research-panel">
+            <h4>結論と意義</h4>
+            <ul>
+              <li>FPS が iPPG の信頼性に圧倒的な影響を与えることを実証。</li>
+              <li>短時間でも高 FPS を確保すれば安定した測定が可能。</li>
+              <li>高 FPS を優先するという具体的な指針をモバイルアプリ設計に提供。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="contact" aria-labelledby="contact-title">
