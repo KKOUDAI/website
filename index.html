@@ -30,6 +30,9 @@
       </nav>
       <div class="header-actions">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="テーマを切り替え">🌙</button>
+        <button class="blog-toggle" id="blogToggle" type="button" aria-label="ブログメニューを開く" aria-expanded="false" aria-controls="blogDrawer">
+          <span class="blog-toggle__line" aria-hidden="true"></span>
+        </button>
         <button class="nav-toggle" id="navToggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="primaryNav">
           <span class="nav-toggle__line" aria-hidden="true"></span>
         </button>
@@ -174,11 +177,11 @@
           </div>
           <div class="project-card__body">
             <p class="project-card__description">
-              禁煙の成果をお金・時間・健康の指標で見える化し、前向きな習慣化を支えるセルフケアアプリです。
+              禁煙の成果をお金で見える化し、前向きな習慣化を支えるセルフケアアプリです。
             </p>
             <ul class="project-card__points">
-              <li>禁煙と喫煙の履歴をカレンダーで可視化</li>
-              <li>吸わなかった本数から節約額と自由時間を自動計算</li>
+              <li>喫煙の履歴をカレンダーで可視化</li>
+              <li>吸わなかった本数から節約額を自動計算</li>
               <li>節約額に応じたリワード候補と通知で継続を後押し</li>
             </ul>
           </div>
@@ -441,7 +444,7 @@
               </svg>
             </div>
             <div class="timeline__body">
-              <time class="timeline__time">2019</time>
+              <time class="timeline__time">2019年 高校2年</time>
               <h3>週末にこつこつ Swift を習得</h3>
               <p>塾のアプリ制作のイベントを機に Swift を独学。友達やユーザからのレビューを受け、使いやすさにこだわる姿勢が芽生えました。</p>
             </div>
@@ -463,8 +466,9 @@
               </svg>
             </div>
             <div class="timeline__body">
-              <time class="timeline__time">2020</time>
-              <h3>「勉強スケジュール べんすけ」で初リリース</h3>
+              <time class="timeline__time">2020 高校3年</time> 
+              <h3>「勉強スケジュール べんすけ」で初リリース<br>
+                　アプリ甲子園ファイナリスト選出</h3>           
               <p>受験期の課題だった学習計画づくりをアプリで解決。リジェクト対応を繰り返し、UI/UX と審査観点の両方で学びを得ました。</p>
             </div>
           </div>
@@ -553,7 +557,8 @@
           <h3 class="research-overview__title">FPS が iPPG 測定の信頼性を決める</h3>
           <p class="research-overview__description">スマートフォンなどのカメラで脈波を測定する iPPG では、<strong>撮影時間よりも動画の滑らかさ（フレームレート / FPS）がデータ品質を大きく左右する</strong>ことを明らかにしました。</p>
           <ul class="research-overview__points">
-            <li>DET・L・E の全指標で FPS の影響が最大</li>
+            <li>DET・L・E の全指標で FPS の<br>
+              影響が最大</li>
             <li>測定時間を短くしても品質はほぼ維持</li>
             <li>FPS を下げると指標値が急激に変化</li>
           </ul>
@@ -609,6 +614,50 @@
       </form>
     </section>
   </main>
+
+  <aside class="blog-drawer" id="blogDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="blogDrawerTitle" tabindex="-1">
+    <div class="blog-drawer__inner">
+      <header class="blog-drawer__header">
+        <div>
+          <p class="blog-drawer__eyebrow">Blog Notes</p>
+          <h2 id="blogDrawerTitle">ものづくりの日記帳</h2>
+          <p class="blog-drawer__intro">開発や研究の舞台裏、学びのメモをラフに綴るスペースです。アプリに込めた背景や iPPG 研究の途中経過をまとめています。</p>
+        </div>
+        <button class="blog-drawer__close" id="blogClose" type="button" aria-label="ブログメニューを閉じる">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>
+      <div class="blog-drawer__entries" role="list">
+        <article class="blog-entry" role="button" tabindex="0" data-post="fps-ippg" aria-labelledby="post-fps-ippg-title" aria-describedby="post-fps-ippg-meta post-fps-ippg-excerpt">
+          <p class="blog-entry__meta" id="post-fps-ippg-meta">2025.03.02 · Research Log</p>
+          <h3 class="blog-entry__title" id="post-fps-ippg-title">FPS が iPPG 測定を左右する理由</h3>
+          <p class="blog-entry__excerpt" id="post-fps-ippg-excerpt">研究のきっかけと、RQA 指標を使ってデータの複雑さを読み解くまでのプロセスをまとめました。センサーに頼らずカメラで信頼性を出すために、どこから手を付けたのかを紹介しています。</p>
+        </article>
+        <article class="blog-entry" role="button" tabindex="0" data-post="weekend-prototype" aria-labelledby="post-weekend-prototype-title" aria-describedby="post-weekend-prototype-meta post-weekend-prototype-excerpt">
+          <p class="blog-entry__meta" id="post-weekend-prototype-meta">2025.01.29 · Personal</p>
+          <h3 class="blog-entry__title" id="post-weekend-prototype-title">週末プロトタイピングで見つけた習慣設計</h3>
+          <p class="blog-entry__excerpt" id="post-weekend-prototype-excerpt">ミニアプリを作る週末チャレンジの振り返り。生活リズムを可視化するプロトタイプや、SwiftUI で高速に検証した学びを振り返りました。</p>
+        </article>
+      </div>
+      <div class="blog-detail" id="blogDetail" hidden>
+        <button class="blog-detail__back" id="blogDetailBack" type="button" aria-label="記事一覧に戻る">
+          <span aria-hidden="true">←</span>
+          <span>記事一覧に戻る</span>
+        </button>
+        <article class="blog-detail__article">
+          <p class="blog-detail__meta" id="blogDetailMeta"></p>
+          <h3 class="blog-detail__title" id="blogDetailTitle"></h3>
+          <div class="blog-detail__content" id="blogDetailContent"></div>
+        </article>
+      </div>
+      <footer class="blog-drawer__footer">
+        <p>気になるテーマがあれば、ぜひ <a href="#contact">Contact</a> から感想を送ってください。テーマのリクエストも歓迎です。</p>
+        <div class="blog-drawer__actions">
+          <a class="button button--ghost" href="mailto:kkoga2013@gmail.com?subject=%E3%83%96%E3%83%AD%E3%82%B0%E3%81%AE%E6%84%9F%E6%83%B3">メールでフィードバックする</a>
+        </div>
+      </footer>
+    </div>
+  </aside>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> 古賀滉大. Crafted with curiosity and care.</p>
